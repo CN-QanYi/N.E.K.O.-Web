@@ -3,6 +3,12 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      server: {
+        port: 8000
+      }
+    }
+  }),
   theme: defaultTheme(),
 })
