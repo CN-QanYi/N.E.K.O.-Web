@@ -6,7 +6,7 @@ sidebar: false
 
 ![Logo](assets/neko_logo.jpg)
 
-[中文](README.md) | [日本語](README_ja.md)
+[中文](index.md) | [日本語](README_ja.md)
 
 # Project N.E.K.O. :kissing_cat: <br>**A Living AI Companion Metaverse, Built Together by You and Me.**
 

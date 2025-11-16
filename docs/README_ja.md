@@ -6,7 +6,7 @@ sidebar: false
 
 ![ロゴ](assets/neko_logo.jpg)
 
-[中文](README.md) | [English](README_en.md)
+[中文](index.md) | [English](README_en.md)
 
 # Project N.E.K.O. :kissing_cat: <br>**あなたと私が共に築く「生きた」AI伴侶メタバース**
 

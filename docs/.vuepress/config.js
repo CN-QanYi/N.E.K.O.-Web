@@ -27,7 +27,7 @@ export default defineUserConfig({
     // 导航栏配置
     // 数组中的每个元素对应一个导航链接
     navbar: [
-      { text: '首页', link: 'README.md' },
+      { text: '首页', link: 'index.md' },
       { text: '快速开始', link: 'quickstart.md' },
       { text: '技术Q&A', link: 'qa.md' },
       { text: '✨加入我们', link: 'contact.md' },
