@@ -1,9 +1,23 @@
+# Git忽略文件配置
+# 此文件定义了哪些文件和目录不应被Git版本控制系统跟踪
+
+# Node.js依赖包目录（通过npm/pnpm/yarn安装）
 node_modules/
+
+# macOS系统文件
 .DS_Store
+
+# 日志文件
 *.log
+
+# IDE配置文件
 .vscode/
 .idea/
+
+# VuePress临时文件和缓存目录
 docs/.vuepress/.temp
 docs/.vuepress/.cache
+
+# VuePress构建输出目录
 docs/.vuepress/dist
 

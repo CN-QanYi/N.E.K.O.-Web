@@ -1,49 +1,66 @@
 
+# GitHub Actions 工作流配置文件
+# 此工作流用于自动构建和部署 VuePress 文档到 GitHub Pages
+
+# 工作流名称
 name: Deploy Docs
 
+# 触发条件配置
 on:
   push:
     branches:
-      # make sure this is the branch you are using
+      # 确保这是您正在使用的主分支
       - main
 
+# 权限配置
 permissions:
-  contents: write
+  contents: write  # 允许工作流向仓库写入内容
 
+# 作业定义
 jobs:
+  # 部署到 GitHub Pages 的作业
   deploy-gh-pages:
+    # 运行环境
     runs-on: ubuntu-latest
+    
+    # 步骤定义
     steps:
+      # 步骤1: 检出代码
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          # if your docs needs submodules, uncomment the following line
+          fetch-depth: 0  # 获取完整历史记录
+          # 如果文档需要子模块，取消注释以下行
           # submodules: true
 
+      # 步骤2: 安装 pnpm 包管理器
       - name: Install pnpm
         uses: pnpm/action-setup@v4
 
-
+      # 步骤3: 设置 Node.js 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: pnpm
+          node-version: 22  # 指定 Node.js 版本
+          cache: pnpm       # 启用 pnpm 缓存
 
+      # 步骤4: 安装项目依赖
       - name: Install Deps
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile  # 使用锁文件确保依赖版本一致
 
+      # 步骤5: 构建文档
       - name: Build Docs
         env:
-          NODE_OPTIONS: --max_old_space_size=8192
+          NODE_OPTIONS: --max_old_space_size=8192  # 增加 Node.js 内存限制
         run: |-
-          pnpm run docs:build
-          > docs/.vuepress/dist/.nojekyll
+          pnpm run docs:build  # 执行构建命令
+          > docs/.vuepress/dist/.nojekyll  # 创建 .nojekyll 文件以禁用 Jekyll 处理
 
+      # 步骤6: 部署到 GitHub Pages
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # This is the branch where the docs are deployed to
+          # 这是文档部署到的分支
           branch: gh-pages
+          # 要部署的文件夹路径
           folder: docs/.vuepress/dist
