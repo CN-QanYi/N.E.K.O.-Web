@@ -3,6 +3,7 @@ node_modules/
 *.log
 .vscode/
 .idea/
-.vuepress/.temp
-.vuepress/.cache
+docs/.vuepress/.temp
+docs/.vuepress/.cache
+docs/.vuepress/dist
 
