@@ -1,7 +1,7 @@
 ---
 sidebar: false
 ---
-[English(Old)](about_en.md)
+[English(Old version)](about_en.md)
 # 「她」，不止是AI
 **猫娘计划（Project N.E.K.O.）**—— 一个「活着」的AI原生元宇宙
 
