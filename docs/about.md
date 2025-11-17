@@ -95,3 +95,74 @@ sidebar: false
 **猫娘计划（Project N.E.K.O.）** 是一场关于「陪伴」与「生命」的社会实验。
 
 **你的第一声「你好」，是一个全新世界诞生的开始。** 
+
+# 技术介绍（原Lanlan）
+
+本项目作为Project N.E.K.O.的开源驱动器，是一个新手友好、开箱即用的，具有听觉、视觉、工具调用和多端同步功能的AI~~猫娘~~伙伴。本项目有三个核心目标：
+
+1. **极致的低延迟**。本项目的用户界面以语音交互为主，一切系统级设计皆须优先确保**降低语音延迟**，且任何服务不得阻塞对话进程。
+
+1. **全场景同步**。猫娘可以在手机、电脑和智能眼镜上同时存在，且**同一只猫娘**在不同终端同时存在时，**行为应当完全同步**。 (假想场景：如果家中有多个显示器，每一个显示器上都放置着猫娘，那么我们希望无论走到哪里都是在跟同一只猫娘对话，实现全方位环绕式体验。)
+
+1. **轻量化**。每一项技术的引入都必须提升实际的用户体验，避免增加不必要的插件和选项。
+
+### 技术路线
+
+后端以Python为主，以实时多模态API为主要处理器，搭配多个额外的Agent模组。前端以H5+JS为主，通过Electron转换为App。
+
+
+**项目架构**
+
+```
+Lanlan/
+├── 📁 brain/                    # 🧠 背景Agent模块，根据前端对话内容，控制键鼠和MCP
+├── 📁 config/                   # ⚙️ 配置管理模块
+│   ├── api.py                   # API密钥配置
+│   ├── prompts_chara.py         # 角色提示词
+│   └── prompts_sys.py           # 系统提示词
+├── 📁 main_helper/              # 🔧 核心模块
+│   ├── core.py                  # 核心对话模块
+│   ├── cross_server.py         # 跨服务器通信
+│   ├── omni_realtime_client.py  # 实时API客户端
+│   ├── omni_offline_client.py  # 文本API客户端
+│   └── tts_helper.py            # 🔊 TTS引擎适配器
+├── 📁 memory/                   # 🧠 记忆管理系统
+│   ├── store/                   # 记忆数据存储
+├── 📁 static/                   # 🌐 前端静态资源
+├── 📁 templates/                # 📄 前端HTML模板
+├── 📁 utils/                    # 🛠️ 工具模块
+├── 📁 launcher/                 # 🚀 Rust启动器
+├── main_server.py               # 🌐 主服务器
+├── agent_server.py              # 🤖 AI智能体服务器
+└── memory_server.py             # 🧠 记忆服务器
+```
+**数据流向**
+
+![Framework](assets/framework.drawio.svg)
+
+### 参与开发
+
+本项目环境依赖非常简单，请在`python3.11`环境中执行`pip install -r requirements.txt`或`uv sync`即可。请注意将`config/api_template.py`复制为`config/api.py`.开发者建议加入企鹅群1022939659，猫娘名称见项目标题。
+
+开发者详细启动步骤如下：(1)新建`pyhon3.11`环境。(2)执行`pip install -r requirements.txt`或`uv sync`安装依赖。(3)复制`config/api_template.py`到`config/api.py`并进行必要配置。(4)执行`python memory_server.py`, `python main_server.py`(可选`python agent_server.py`)。(5)通过main server中指定的端口（默认为`http://localhost:48911`）访问网页版。
+
+
+### TODO List（开发计划）
+
+#### A. 高优先级
+
+1. 移除memory server中语义索引的部分，引入Graphiti用于长期记忆存储；开放settings update功能。
+
+1. 完善主动对话功能。
+
+1. 用React对前端进行重构，筹备手机端独立运行版本。
+
+#### B. 中等优先级
+
+1. 通过引入Unity支持3D模型。
+
+1. 猫娘网络。允许猫娘之间自行通信。需要一定的用户量基础，因此优先级下调。
+
+1. 接入QQ/cursor等外部软件。由于语音模型是实时特化的，cursor类软件只能以工具形式被Lanlan调用；QQ类软件只能将Memory Server嵌入到其他框架。
+
+1. 完善原生工具调用。
