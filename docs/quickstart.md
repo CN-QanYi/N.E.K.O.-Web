@@ -1,8 +1,9 @@
 ---
 sidebar: false
 ---
-[English](quickstart_en.md)
+[English](quickstart_en.md) | [日本語](quickstart_ja.md)
 # 下载地址
+[![Steam](https://custom-icon-badges.demolab.com/badge/Steam-Link-4169E1?style=flat&logo=steam)](https://store.steampowered.com/app/4099310/__NEKO/)
 [![GitHub](https://img.shields.io/badge/GitHub-Project%20N.E.K.O.-181717?style=flat&logo=github)](https://github.com/wehos/N.E.K.O)
 [![百度云](https://custom-icon-badges.demolab.com/badge/百度云-Link-4169E1?style=flat&logo=baidunetdisk)](https://pan.baidu.com/s/1qb9XVV94c2FwhIeQO2De5A?pwd=kuro)
 

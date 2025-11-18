@@ -32,6 +32,7 @@ export default defineUserConfig({
       { text: '技术Q&A', link: 'qa.md' },
       { text: '✨加入我们', link: 'contact.md' },
       { text: '关于N.E.K.O.', link: 'about.md' },
+      { text: 'GitHub', link: 'https://github.com/wehos/N.E.K.O' },
     ],
   }),
 

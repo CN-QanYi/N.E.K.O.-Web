@@ -19,25 +19,17 @@ sidebar: false
 [![Commit](https://img.shields.io/github/last-commit/wehos/Xiao8?color=green)]()
 [![Baidu Cloud](https://custom-icon-badges.demolab.com/badge/百度云-Link-4169E1?style=flat&logo=baidunetdisk)](https://pan.baidu.com/s/1qb9XVV94c2FwhIeQO2De5A?pwd=kuro)
 [![QQ Group](https://custom-icon-badges.demolab.com/badge/QQ群-1048307485-00BFFF?style=flat&logo=tencent-qq)](https://qm.qq.com/q/mxDoz0TnGg)
+[![Steam](https://custom-icon-badges.demolab.com/badge/Steam-Link-4169E1?style=flat&logo=steam)](https://store.steampowered.com/app/4099310/__NEKO/)
 
 **:older_woman: Zero-configuration, ready-to-use cyber catgirl that even my grandma can master!**
 
-:newspaper: **v0.5.1 Released with Complete UI Overhaul! Now includes out-of-the-box free exclusive model (sponsored by StepFun), with text input and proactive dialogue mode support!**
+:newspaper: **[![Steam](https://img.shields.io/badge/Steam-%23000000.svg?logo=steam&logoColor=white)](https://store.steampowered.com/app/4099310/__NEKO/) version has been released! Complete UI overhaul and added out-of-the-box exclusive free model (thanks to StepFun for sponsoring this project). Add it to your wishlist now~**
 
-*Now rebranded as Project N.E.K.O., coming soon to Steam!*
-
-</div>
-
-<div align="center">
-
-#### Feature Demo (Full version on Bilibili) [![Bilibili](https://img.shields.io/badge/Bilibili-Tutorial-blue)](https://www.bilibili.com/video/BV1mM32zXE46/)
-
-https://github.com/user-attachments/assets/9d9e01af-e2cc-46aa-add7-8eb1803f061c
+*Project N.E.K.O., NekoVerse!*
 
 </div>
+
+# Feature Demo (Full version on Bilibili) 
+[![Bilibili](https://img.shields.io/badge/Bilibili-Tutorial-blue)](https://www.bilibili.com/video/BV1mM32zXE46/)
 
 ---
-
-# Special Thanks
-
-Special thanks to *明天好像没什么*, *喵*, and *小韭菜饺* for their assistance with early development testing. Special thanks to *大毛怪灬嘎* for providing logo assets.

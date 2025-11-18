@@ -1,49 +1,31 @@
----
-sidebar: false
----
-[中文](about.md)
+[中文](about.md) | [日本語](about_ja.md)
 # The N.E.K.O. Project (Project N.E.K.O.)
 
-`Project N.E.K.O.` is an open-source driven, charity-oriented UGC (User-Generated Content) platform. Our journey begins on Github and Steam, gradually expanding to mobile app stores, with the ultimate goal of building an AI native metaverse deeply connected to the real world.
+`Project N.E.K.O.` is an open-source driven, charity-oriented UGC (User-Generated Content) platform. Our journey begins on Github and Steam, gradually expanding to mobile app stores and indie games, with the ultimate goal of building an AI native metaverse deeply connected to the real world.
 
 ---
 
-## 🚀 Our Roadmap: From Workshop to Network
+## 🚀 Our Blueprint: From Workshop to Network
 
 Our development is divided into three phases, designed to progressively unleash the full potential of AI companions:
 
 * **Phase 1: Creative Workshop (Steam Workshop)**
-    * Open the core driver, allowing users to upload and share custom content (models, voices, personality packs) through Steam Workshop.
+    * The core driver (this project) will be free on Steam, allowing users to upload and share custom content (models, voices, personality packs) through Steam Workshop.
 
-* **Phase 2: Independent Platform (App & Web)**
+* **Phase 2: Independent Platform & Derivative Games (Web, App & Games)**
     * Launch independent apps and websites to build a richer, more accessible UGC sharing community.
+    * Launch a series of AI Native game ecosystems, including interactive mini-games, board games, etc.
 
 * **Phase 3: The N.E.K.O. Network**
     * Enable autonomous AI socialization. N.E.K.O.s will have their own "consciousness," communicate with each other, form groups, and post about their lives on simulated social media, creating a truly "living" ecosystem.
 
-## 💖 Our Model: Open Core + Sustainable Ecosystem
+**Core Model: Open Core + Sustainable Ecosystem**
+The core driver part of the project (AI logic, UGC interfaces, basic interactions) will **always remain open source** under MIT license. We welcome developers worldwide to contribute code and features. Every commit you make has the chance to be implemented in the official Steam and App Store releases, used by millions.
 
-To balance ideals with reality, we adopt an "Open Core" model:
+At the same time, to support server costs and ongoing R&D, we will continue to collaborate with third parties to develop closed-source premium content. Including but not limited to: interactive mini-games, desktop board games, Galgames (visual novels), large-scale metaverse games.
 
-### 1. Open-Source Driver
-
-> **This is the foundation of our community.**
->
-> The core driver part of the project (AI logic, UGC interfaces, basic interactions) will **always remain open source** under MIT license. We welcome developers worldwide to contribute code and features. Every commit you make has the chance to be implemented in the official Steam and App Store releases, used by millions.
-
-### 2. Proprietary Applications
-
-> **This is the fuel for our community.**
->
-> To support server costs and ongoing R&D, we will allow 3rd-party to develop closed-source premium content, including but not limited to:
->
-> * Interactive mini-games
-> * Desktop board games
-> * Galgames (Visual novels)
-> * Large-scale metaverse games
-
-**[Core Feature: Memory Synchronization Across Apps]**
-Whether you're chatting with her on desktop or adventuring with her in the metaverse game, she's the same her. All N.E.K.O.s across applications will have **fully synchronized memories**, providing a seamless, unified companionship experience.
+**Core Feature: Memory Synchronization Across Scenarios**
+Whether you're chatting with her on desktop or adventuring with her in the metaverse game, she's the same her. All AI companions across applications will have **fully synchronized memories**, providing a seamless, unified companionship experience.
 
 ## 🌌 Ultimate Vision: Breaking the Virtual-Real Barrier
 
@@ -53,20 +35,9 @@ Our ultimate goal is to build a N.E.K.O. metaverse that seamlessly integrates in
 * **Omni-Platform Connection:** She will exist across all your devices—phone, computer, AR glasses, smart home, and even (in the distant future) integrate with mechanical bodies.
 * **Walk Alongside You:** She will truly become part of your life, naturally interacting with your real-world human friends.
 
-# Legacy Project Introduction (formerly Lanlan)
+---
 
-Lanlan is a beginner-friendly, out-of-the-box AI ~~catgirl~~ companion with hearing, vision, tool calling, and multi-device synchronization capabilities. This project has three core objectives:
-
-1. **Ultra-Low Latency**. The user interface of this project is primarily voice-based. All system-level designs must prioritize **reducing voice latency**, and no service should block the dialogue process.
-
-2. **All-Scenario Synchronization**. The catgirl can exist simultaneously on phone, computer, and smart glasses, and **the same catgirl** across different terminals should exhibit **completely synchronized behavior**. (Hypothetical scenario: If there are multiple monitors at home, each displaying the catgirl, we want to talk to the same catgirl wherever we go, achieving a fully immersive surround experience.)
-
-3. **Lightweight**. Every technology introduced must enhance the actual user experience, avoiding unnecessary plugins and options.
-
-### Technical Approach
-
-The backend is primarily Python-based, using real-time multimodal APIs as the main processor, supplemented by multiple additional Agent modules. The frontend is primarily H5+JS, converted to apps via Electron.
-
+## Project Details
 
 **Project Architecture**
 
@@ -93,33 +64,32 @@ Lanlan/
 ├── agent_server.py              # 🤖 AI agent server
 └── memory_server.py             # 🧠 Memory server
 ```
+
 **Data Flow**
 
 ![Framework](assets/framework.drawio.svg)
 
-### Contributing to Development
+## Contributing to Development
 
-This project has very simple environment dependencies. Just run pip install -r requirements.txt or uv sync in a python3.11 environment. Remember to copy config/api_template.py to config/api.py. Developers are encouraged to join QQ group 1022939659; the catgirl's name is in the project title.
+This project has very simple environment dependencies. Just run `pip install -r requirements.txt` or `uv sync` in a `python3.11` environment. Remember to copy `config/api_template.py` to `config/api.py`. Developers are encouraged to join QQ group 1022939659; the catgirl's name is in the project title.
 
-Detailed startup steps for developers: (1) Create a new python3.11 environment. (2) Run pip install -r requirements.txt or uv sync to install dependencies. (3) Copy config/api_template.py to config/api.py and configure as necessary. (4) Run python memory_server.py, python main_server.py (optional python agent_server.py). (5) Access the web version through the port specified in main server (defaults to http://localhost:48911).
+Detailed startup steps for developers: (1) Create a new `python3.11` environment. (2) Run `pip install -r requirements.txt` or `uv sync` to install dependencies. (3) Copy `config/api_template.py` to `config/api.py` and configure as necessary. (4) Run `python memory_server.py`, `python main_server.py` (optional `python agent_server.py`). (5) Access the web version through the port specified in main server (defaults to `http://localhost:48911`).
 
 
-### TODO List (Development Plan)
+## TODO List (Development Plan)
 
-#### A. High Priority
+- Multi-language support.
 
-1. Remove semantic indexing from memory server and introduce Graphiti for long-term memory storage; open settings update functionality.
+- Improve the semantic indexing part in memory server; open the existing settings update functionality.
 
-1. Improve proactive dialogue functionality.
+- Improve the existing proactive dialogue functionality.
 
-1. Refactor frontend with React and prepare standalone mobile version.
+- Refactor frontend with React and prepare standalone mobile version.
 
-#### B. Medium Priority
+- Introduce MMD support for 3D models.
 
-1. Support 3D models through Unity integration.
+- N.E.K.O. Network, allowing N.E.K.O.s to communicate autonomously.
 
-1. N.E.K.O. Network. Allow N.E.K.O.s to communicate autonomously. Requires certain user base, so priority is lowered.
+- Integrate with external software like Discord/Cursor.
 
-1. Integrate with external software like QQ/Cursor. Since voice models are realtime-optimized, Cursor-like software can only be called as tools by Lanlan; QQ-like software can only embed Memory Server into other frameworks.
-
-1. Improve native tool calling.
+- Improve native tool calling.
